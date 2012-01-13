@@ -24,7 +24,7 @@
     NSRange numberRange;
     
     UINavigationBar * navBar;
-    UIBarButtonItem * cancelButton;
+    UIBarButtonItem * doneButton;
     
     UIButton * confirmButton;
     UIButton * denyButton;

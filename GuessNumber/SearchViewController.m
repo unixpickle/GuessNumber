@@ -38,14 +38,14 @@
     [super loadView];
     
     navBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 44) title:@"Search"];
-    cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(closeView:)];
+    doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(closeView:)];
     confirmButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     denyButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     
     [confirmButton setFrame:CGRectMake(self.view.frame.size.width - 90, 369, 80, 44)];
     [denyButton setFrame:CGRectMake(self.view.frame.size.width - 180, 369, 80, 44)];
     
-    [[navBar topItem] setLeftBarButtonItem:cancelButton];
+    [[navBar topItem] setRightBarButtonItem:doneButton];
     
     [confirmButton addTarget:self action:@selector(confirmPresent:) forControlEvents:UIControlEventTouchUpInside];
     [confirmButton setTitle:@"Present" forState:UIControlStateNormal];
@@ -58,7 +58,7 @@
     [self.view addSubview:confirmButton];
     [self.view addSubview:denyButton];
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1];
     [self populateGridView:gridView];
 }
 

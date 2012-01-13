@@ -12,12 +12,12 @@
 
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
-        woopsLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 50, frame.size.width - 20, 30)];
+        woopsLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 70, frame.size.width - 20, 30)];
         [woopsLabel setTextAlignment:UITextAlignmentCenter];
         [woopsLabel setFont:[UIFont systemFontOfSize:24]];
         [woopsLabel setText:@"Woops!"];
         
-        subLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 85, frame.size.width - 20, 25)];
+        subLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 105, frame.size.width - 20, 25)];
         [subLabel setFont:[UIFont systemFontOfSize:16]];
         [subLabel setTextAlignment:UITextAlignmentCenter];
         [subLabel setText:@"Your number doesn't exist"];

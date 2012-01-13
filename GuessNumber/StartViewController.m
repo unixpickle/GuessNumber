@@ -31,7 +31,7 @@
     startButton = [[UIBarButtonItem alloc] initWithTitle:@"Start" style:UIBarButtonItemStyleBordered target:self action:@selector(startButtonTapped:)];
     scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 44, self.view.frame.size.width, self.view.frame.size.height - 44)];
     numOptsLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 59, self.view.frame.size.width - 20, 20)];
-    numOptsValue = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"25", @"36", @"49", nil]];
+    numOptsValue = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"16", @"25", @"36", nil]];
     rangeLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 143, self.view.frame.size.width - 20, 20)];
     rangeValue = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"1-25", @"1-50", @"1-100", nil]];
     
@@ -75,9 +75,9 @@
 }
 
 - (void)startButtonTapped:(id)sender {
-    NSUInteger widthHeight = 5;
-    if ([numOptsValue selectedSegmentIndex] == 1) widthHeight = 6;
-    else if ([numOptsValue selectedSegmentIndex] == 2) widthHeight = 7;
+    NSUInteger widthHeight = 4;
+    if ([numOptsValue selectedSegmentIndex] == 1) widthHeight = 5;
+    else if ([numOptsValue selectedSegmentIndex] == 2) widthHeight = 6;
     
     NSUInteger maxNum = 25;
     if ([rangeValue selectedSegmentIndex] == 1) maxNum = 50;
