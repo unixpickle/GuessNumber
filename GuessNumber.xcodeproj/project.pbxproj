@@ -15,10 +15,13 @@
 		FAD310F314BF8988004A4CA8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD310F214BF8988004A4CA8 /* AppDelegate.m */; };
 		FAD310FB14BF89BF004A4CA8 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD310FA14BF89BF004A4CA8 /* StartViewController.m */; };
 		FAD3110514BF8E0D004A4CA8 /* UINavigationBar+EasyTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD3110414BF8E0D004A4CA8 /* UINavigationBar+EasyTitle.m */; };
-		FAD3110714BF93B2004A4CA8 /* Fkuer.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD3110614BF93B2004A4CA8 /* Fkuer.xib */; };
 		FAD3110D14BF9C9D004A4CA8 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD3110C14BF9C9D004A4CA8 /* SearchViewController.m */; };
 		FAD3111114BF9D5A004A4CA8 /* NumberGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD3111014BF9D5A004A4CA8 /* NumberGrid.m */; };
 		FAD3111614BFA463004A4CA8 /* NumberGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD3111514BFA463004A4CA8 /* NumberGridView.m */; };
+		FAD3111814BFCDDE004A4CA8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD3111714BFCDDE004A4CA8 /* QuartzCore.framework */; };
+		FAD3111B14C0C7A2004A4CA8 /* PaneView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD3111A14C0C7A2004A4CA8 /* PaneView.m */; };
+		FAD3111E14C0C81D004A4CA8 /* NumberFoundPane.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD3111D14C0C81D004A4CA8 /* NumberFoundPane.m */; };
+		FAD3112114C0D8BD004A4CA8 /* NoNumberPane.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD3112014C0D8BD004A4CA8 /* NoNumberPane.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,13 +39,19 @@
 		FAD310FA14BF89BF004A4CA8 /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
 		FAD3110314BF8E0D004A4CA8 /* UINavigationBar+EasyTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+EasyTitle.h"; sourceTree = "<group>"; };
 		FAD3110414BF8E0D004A4CA8 /* UINavigationBar+EasyTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+EasyTitle.m"; sourceTree = "<group>"; };
-		FAD3110614BF93B2004A4CA8 /* Fkuer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Fkuer.xib; sourceTree = "<group>"; };
 		FAD3110B14BF9C9D004A4CA8 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		FAD3110C14BF9C9D004A4CA8 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		FAD3110F14BF9D5A004A4CA8 /* NumberGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberGrid.h; sourceTree = "<group>"; };
 		FAD3111014BF9D5A004A4CA8 /* NumberGrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberGrid.m; sourceTree = "<group>"; };
 		FAD3111414BFA463004A4CA8 /* NumberGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberGridView.h; sourceTree = "<group>"; };
 		FAD3111514BFA463004A4CA8 /* NumberGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberGridView.m; sourceTree = "<group>"; };
+		FAD3111714BFCDDE004A4CA8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FAD3111914C0C7A2004A4CA8 /* PaneView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaneView.h; sourceTree = "<group>"; };
+		FAD3111A14C0C7A2004A4CA8 /* PaneView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaneView.m; sourceTree = "<group>"; };
+		FAD3111C14C0C81D004A4CA8 /* NumberFoundPane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberFoundPane.h; sourceTree = "<group>"; };
+		FAD3111D14C0C81D004A4CA8 /* NumberFoundPane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberFoundPane.m; sourceTree = "<group>"; };
+		FAD3111F14C0D8BD004A4CA8 /* NoNumberPane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoNumberPane.h; sourceTree = "<group>"; };
+		FAD3112014C0D8BD004A4CA8 /* NoNumberPane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoNumberPane.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD3111814BFCDDE004A4CA8 /* QuartzCore.framework in Frameworks */,
 				FAD310E314BF8988004A4CA8 /* UIKit.framework in Frameworks */,
 				FAD310E514BF8988004A4CA8 /* Foundation.framework in Frameworks */,
 				FAD310E714BF8988004A4CA8 /* CoreGraphics.framework in Frameworks */,
@@ -79,6 +89,7 @@
 		FAD310E114BF8988004A4CA8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FAD3111714BFCDDE004A4CA8 /* QuartzCore.framework */,
 				FAD310E214BF8988004A4CA8 /* UIKit.framework */,
 				FAD310E414BF8988004A4CA8 /* Foundation.framework */,
 				FAD310E614BF8988004A4CA8 /* CoreGraphics.framework */,
@@ -108,7 +119,6 @@
 				FAD310EB14BF8988004A4CA8 /* InfoPlist.strings */,
 				FAD310EE14BF8988004A4CA8 /* main.m */,
 				FAD310F014BF8988004A4CA8 /* GuessNumber-Prefix.pch */,
-				FAD3110614BF93B2004A4CA8 /* Fkuer.xib */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -136,8 +146,14 @@
 			children = (
 				FAD3110B14BF9C9D004A4CA8 /* SearchViewController.h */,
 				FAD3110C14BF9C9D004A4CA8 /* SearchViewController.m */,
+				FAD3111914C0C7A2004A4CA8 /* PaneView.h */,
+				FAD3111A14C0C7A2004A4CA8 /* PaneView.m */,
 				FAD3111414BFA463004A4CA8 /* NumberGridView.h */,
 				FAD3111514BFA463004A4CA8 /* NumberGridView.m */,
+				FAD3111C14C0C81D004A4CA8 /* NumberFoundPane.h */,
+				FAD3111D14C0C81D004A4CA8 /* NumberFoundPane.m */,
+				FAD3111F14C0D8BD004A4CA8 /* NoNumberPane.h */,
+				FAD3112014C0D8BD004A4CA8 /* NoNumberPane.m */,
 			);
 			name = "Narrow Down View";
 			sourceTree = "<group>";
@@ -193,7 +209,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAD310ED14BF8988004A4CA8 /* InfoPlist.strings in Resources */,
-				FAD3110714BF93B2004A4CA8 /* Fkuer.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +226,9 @@
 				FAD3110D14BF9C9D004A4CA8 /* SearchViewController.m in Sources */,
 				FAD3111114BF9D5A004A4CA8 /* NumberGrid.m in Sources */,
 				FAD3111614BFA463004A4CA8 /* NumberGridView.m in Sources */,
+				FAD3111B14C0C7A2004A4CA8 /* PaneView.m in Sources */,
+				FAD3111E14C0C81D004A4CA8 /* NumberFoundPane.m in Sources */,
+				FAD3112114C0D8BD004A4CA8 /* NoNumberPane.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,6 +15,9 @@
         gridCapacity = widthHeight * widthHeight;
         numberRange = NSMakeRange(1, max);
         
+        gridWidth = widthHeight;
+        gridHeight = widthHeight;
+        
         NSMutableArray * numbers = [NSMutableArray arrayWithCapacity:gridCapacity];
         for (NSUInteger i = 1; i <= max; i++) {
             [numbers addObject:[NSNumber numberWithUnsignedInteger:i]];
@@ -24,6 +27,7 @@
         
         gridView = [[NumberGridView alloc] initWithFrame:CGRectMake(10, 54, 300, 300)
                                                    width:widthHeight height:widthHeight];
+        currentPane = gridView;
     }
     return self;
 }
@@ -35,17 +39,56 @@
     
     navBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 44) title:@"Search"];
     cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(closeView:)];
+    confirmButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    denyButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    
+    [confirmButton setFrame:CGRectMake(self.view.frame.size.width - 90, 369, 80, 44)];
+    [denyButton setFrame:CGRectMake(self.view.frame.size.width - 180, 369, 80, 44)];
     
     [[navBar topItem] setLeftBarButtonItem:cancelButton];
     
+    [confirmButton addTarget:self action:@selector(confirmPresent:) forControlEvents:UIControlEventTouchUpInside];
+    [confirmButton setTitle:@"Present" forState:UIControlStateNormal];
+    
+    [denyButton addTarget:self action:@selector(denyPresent:) forControlEvents:UIControlEventTouchUpInside];
+    [denyButton setTitle:@"Absent" forState:UIControlStateNormal];
+    
     [self.view addSubview:navBar];
     [self.view addSubview:gridView];
+    [self.view addSubview:confirmButton];
+    [self.view addSubview:denyButton];
     
-    self.view.backgroundColor = [UIColor grayColor];
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self populateGridView:gridView];
 }
 
 - (void)closeView:(id)sender {
     [self.presentingViewController dismissModalViewControllerAnimated:YES];
+}
+
+- (void)confirmPresent:(id)sender {
+    [grid narrowToNumbers:currentNumbers];
+    [self swipeGrids];
+}
+
+- (void)denyPresent:(id)sender {
+    [grid ruleOutNumbers:currentNumbers];
+    [self swipeGrids];
+}
+
+- (void)presentNewPane:(UIView *)aPane {
+    __block UIView * lastView = currentPane;
+    currentPane = aPane;
+    [currentPane setFrame:CGRectMake(self.view.frame.size.width + 10, 54, 300, 300)];
+    [self.view addSubview:currentPane];
+    [UIView animateWithDuration:0.5 animations:^ {
+        [lastView setFrame:CGRectMake(0 - (lastView.frame.origin.x + lastView.frame.size.width), lastView.frame.origin.y,
+                                      lastView.frame.size.width, lastView.frame.size.height)];
+        [currentPane setFrame:CGRectMake(10, 54, 300, 300)];
+    } completion:^ (BOOL finished) {
+        [lastView removeFromSuperview];
+        lastView = nil;
+    }];
 }
 
 - (void)viewDidUnload {
@@ -62,7 +105,34 @@
 #pragma mark - Grid -
 
 - (void)populateGridView:(NumberGridView *)theGrid {
+    NSArray * goodNumbers = [grid guessesWithCount:gridCapacity];
+    [theGrid setNumbers:goodNumbers];
+    currentNumbers = goodNumbers;
+}
+
+- (void)swipeGrids {
+    if ([grid possibleNumbersCount] <= 1) {
+        if ([grid possibleNumbersCount] == 0) {
+            NoNumberPane * notFound = [[NoNumberPane alloc] initWithFrame:CGRectMake(self.view.frame.size.width + 10, 54, 300, 300)];
+            [self presentNewPane:notFound];
+        } else {
+            NSArray * possibilities = [grid allPossibilities];
+            NSAssert([possibilities count] == 1, @"Unmatching possibility count");
+            NumberFoundPane * found = [[NumberFoundPane alloc] initWithFrame:CGRectMake(self.view.frame.size.width + 10, 54, 300, 300)
+                                                                      number:[possibilities lastObject]];
+            [self presentNewPane:found];
+        }
+        [confirmButton removeFromSuperview];
+        [denyButton removeFromSuperview];
+        return;
+    }
     
+    NSLog(@"Num possibs: %d", (int)[grid possibleNumbersCount]);
+    
+    gridView = [[NumberGridView alloc] initWithFrame:CGRectMake(self.view.frame.size.width + 10, 54, 300, 300)
+                                               width:gridWidth height:gridHeight];
+    [self populateGridView:gridView];
+    [self presentNewPane:gridView];
 }
 
 @end

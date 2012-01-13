@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PaneView.h"
 
 #define kNumberCellWidth 36
-#define kNumberCellHeight 20
+#define kNumberCellHeight 21
 
-@interface NumberGridView : UIView {
+@interface NumberGridView : PaneView {
     CGFloat horizontalSpacing, verticalSpacing;
     NSUInteger numRows, numCols;
     NSMutableArray * numLabels;

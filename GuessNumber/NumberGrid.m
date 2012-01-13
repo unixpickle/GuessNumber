@@ -37,8 +37,8 @@
     for (NSUInteger i = 0; i < numberOfEntries; i++) {
         if (entries[i].state == NumberGridEntryStateRuledOut) continue;
         BOOL isInList = NO;
-        for (NSUInteger i = 0; i < [numbers count]; i++) {
-            NSUInteger number = [[numbers objectAtIndex:i] unsignedIntegerValue];
+        for (NSUInteger j = 0; j < [numbers count]; j++) {
+            NSUInteger number = [[numbers objectAtIndex:j] unsignedIntegerValue];
             if (number == entries[i].number) {
                 isInList = YES;
                 break;
@@ -79,9 +79,14 @@
     NSMutableArray * ruledOut = [[self ruledOutNumbers] mutableCopy];
     NSUInteger numPossible = [possible count] / 2;
     NSUInteger numRuledOut = 0;
+    
     if (numPossible < count) {
         numRuledOut = count - numPossible;
-        if (numRuledOut > [ruledOut count]) numRuledOut = 0;
+        if (numRuledOut > [ruledOut count]) {
+            numRuledOut = [ruledOut count];
+        }
+    } else if (numPossible > count) {
+        numPossible = count;
     }
     
     NSMutableArray * returnNumbers = [NSMutableArray array];

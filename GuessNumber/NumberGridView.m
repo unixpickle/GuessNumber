@@ -12,7 +12,6 @@
 
 - (id)initWithFrame:(CGRect)frame width:(NSUInteger)cols height:(NSUInteger)rows {
     if ((self = [super initWithFrame:frame])) {
-        self.backgroundColor = [UIColor blueColor];
         horizontalSpacing = (frame.size.width - ((CGFloat)cols * kNumberCellWidth)) / (CGFloat)cols;
         verticalSpacing = (frame.size.height - ((CGFloat)rows * kNumberCellHeight)) / (CGFloat)rows;
         numCols = cols;
@@ -23,7 +22,8 @@
                 CGFloat xcoord = round(horizontalSpacing / 2 + x * (kNumberCellWidth + horizontalSpacing));
                 CGFloat ycoord = round(verticalSpacing / 2 + y * (kNumberCellHeight + verticalSpacing));
                 UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(xcoord, ycoord, kNumberCellWidth, kNumberCellHeight)];
-                [label setBackgroundColor:[UIColor grayColor]];
+                [label setBackgroundColor:[UIColor clearColor]];
+                [label setTextAlignment:UITextAlignmentCenter];
                 [self addSubview:label];
                 [numLabels addObject:label];
             }
