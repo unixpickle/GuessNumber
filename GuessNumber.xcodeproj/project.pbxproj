@@ -13,6 +13,12 @@
 		FAD310ED14BF8988004A4CA8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FAD310EB14BF8988004A4CA8 /* InfoPlist.strings */; };
 		FAD310EF14BF8988004A4CA8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD310EE14BF8988004A4CA8 /* main.m */; };
 		FAD310F314BF8988004A4CA8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD310F214BF8988004A4CA8 /* AppDelegate.m */; };
+		FAD310FB14BF89BF004A4CA8 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD310FA14BF89BF004A4CA8 /* StartViewController.m */; };
+		FAD3110514BF8E0D004A4CA8 /* UINavigationBar+EasyTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD3110414BF8E0D004A4CA8 /* UINavigationBar+EasyTitle.m */; };
+		FAD3110714BF93B2004A4CA8 /* Fkuer.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD3110614BF93B2004A4CA8 /* Fkuer.xib */; };
+		FAD3110D14BF9C9D004A4CA8 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD3110C14BF9C9D004A4CA8 /* SearchViewController.m */; };
+		FAD3111114BF9D5A004A4CA8 /* NumberGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD3111014BF9D5A004A4CA8 /* NumberGrid.m */; };
+		FAD3111614BFA463004A4CA8 /* NumberGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD3111514BFA463004A4CA8 /* NumberGridView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +26,23 @@
 		FAD310E214BF8988004A4CA8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FAD310E414BF8988004A4CA8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FAD310E614BF8988004A4CA8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		FAD310EA14BF8988004A4CA8 /* GuessNumber-Info.plist */ = {isa = PBXFileReference; path = "GuessNumber-Info.plist"; sourceTree = "<group>"; };
+		FAD310EA14BF8988004A4CA8 /* GuessNumber-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GuessNumber-Info.plist"; sourceTree = "<group>"; };
 		FAD310EC14BF8988004A4CA8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FAD310EE14BF8988004A4CA8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FAD310F014BF8988004A4CA8 /* GuessNumber-Prefix.pch */ = {isa = PBXFileReference; path = "GuessNumber-Prefix.pch"; sourceTree = "<group>"; };
-		FAD310F114BF8988004A4CA8 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		FAD310F014BF8988004A4CA8 /* GuessNumber-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GuessNumber-Prefix.pch"; sourceTree = "<group>"; };
+		FAD310F114BF8988004A4CA8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FAD310F214BF8988004A4CA8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FAD310F914BF89BF004A4CA8 /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
+		FAD310FA14BF89BF004A4CA8 /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
+		FAD3110314BF8E0D004A4CA8 /* UINavigationBar+EasyTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+EasyTitle.h"; sourceTree = "<group>"; };
+		FAD3110414BF8E0D004A4CA8 /* UINavigationBar+EasyTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+EasyTitle.m"; sourceTree = "<group>"; };
+		FAD3110614BF93B2004A4CA8 /* Fkuer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Fkuer.xib; sourceTree = "<group>"; };
+		FAD3110B14BF9C9D004A4CA8 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		FAD3110C14BF9C9D004A4CA8 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		FAD3110F14BF9D5A004A4CA8 /* NumberGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberGrid.h; sourceTree = "<group>"; };
+		FAD3111014BF9D5A004A4CA8 /* NumberGrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberGrid.m; sourceTree = "<group>"; };
+		FAD3111414BFA463004A4CA8 /* NumberGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberGridView.h; sourceTree = "<group>"; };
+		FAD3111514BFA463004A4CA8 /* NumberGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberGridView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +89,13 @@
 		FAD310E814BF8988004A4CA8 /* GuessNumber */ = {
 			isa = PBXGroup;
 			children = (
+				FAD3111314BFA444004A4CA8 /* Narrow Down View */,
+				FAD310FC14BF89C9004A4CA8 /* Navigation */,
+				FAD3110E14BF9D2D004A4CA8 /* Conceptual */,
 				FAD310F114BF8988004A4CA8 /* AppDelegate.h */,
 				FAD310F214BF8988004A4CA8 /* AppDelegate.m */,
+				FAD310F914BF89BF004A4CA8 /* StartViewController.h */,
+				FAD310FA14BF89BF004A4CA8 /* StartViewController.m */,
 				FAD310E914BF8988004A4CA8 /* Supporting Files */,
 			);
 			path = GuessNumber;
@@ -86,8 +108,38 @@
 				FAD310EB14BF8988004A4CA8 /* InfoPlist.strings */,
 				FAD310EE14BF8988004A4CA8 /* main.m */,
 				FAD310F014BF8988004A4CA8 /* GuessNumber-Prefix.pch */,
+				FAD3110614BF93B2004A4CA8 /* Fkuer.xib */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FAD310FC14BF89C9004A4CA8 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				FAD3110314BF8E0D004A4CA8 /* UINavigationBar+EasyTitle.h */,
+				FAD3110414BF8E0D004A4CA8 /* UINavigationBar+EasyTitle.m */,
+			);
+			name = Navigation;
+			sourceTree = "<group>";
+		};
+		FAD3110E14BF9D2D004A4CA8 /* Conceptual */ = {
+			isa = PBXGroup;
+			children = (
+				FAD3110F14BF9D5A004A4CA8 /* NumberGrid.h */,
+				FAD3111014BF9D5A004A4CA8 /* NumberGrid.m */,
+			);
+			name = Conceptual;
+			sourceTree = "<group>";
+		};
+		FAD3111314BFA444004A4CA8 /* Narrow Down View */ = {
+			isa = PBXGroup;
+			children = (
+				FAD3110B14BF9C9D004A4CA8 /* SearchViewController.h */,
+				FAD3110C14BF9C9D004A4CA8 /* SearchViewController.m */,
+				FAD3111414BFA463004A4CA8 /* NumberGridView.h */,
+				FAD3111514BFA463004A4CA8 /* NumberGridView.m */,
+			);
+			name = "Narrow Down View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAD310ED14BF8988004A4CA8 /* InfoPlist.strings in Resources */,
+				FAD3110714BF93B2004A4CA8 /* Fkuer.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +206,11 @@
 			files = (
 				FAD310EF14BF8988004A4CA8 /* main.m in Sources */,
 				FAD310F314BF8988004A4CA8 /* AppDelegate.m in Sources */,
+				FAD310FB14BF89BF004A4CA8 /* StartViewController.m in Sources */,
+				FAD3110514BF8E0D004A4CA8 /* UINavigationBar+EasyTitle.m in Sources */,
+				FAD3110D14BF9C9D004A4CA8 /* SearchViewController.m in Sources */,
+				FAD3111114BF9D5A004A4CA8 /* NumberGrid.m in Sources */,
+				FAD3111614BFA463004A4CA8 /* NumberGridView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

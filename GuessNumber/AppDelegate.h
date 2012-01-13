@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StartViewController.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface AppDelegate : UIResponder <UIApplicationDelegate> {
+    UIWindow * window;
+    StartViewController * startVC;
+}
 
 @end
