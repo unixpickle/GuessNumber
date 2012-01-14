@@ -13,6 +13,8 @@
 #import "NumberGrid.h"
 #import "UINavigationBar+EasyTitle.h"
 
+#define kCurrentPaneY 84
+
 @interface SearchViewController : UIViewController {
     NumberGridView * gridView;
     NumberGrid * grid;
@@ -28,6 +30,8 @@
     
     UIButton * confirmButton;
     UIButton * denyButton;
+    UILabel * cardNumLabel;
+    NSUInteger cardNumber;
 }
 
 - (id)initWithSize:(NSUInteger)widthHeight range:(NSUInteger)max;
